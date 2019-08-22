@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  mysql:
+    image: mysql
+    container_name: clear-arch.dev
+    command: mysqld --user=root --verbose
+    ports:
+      - "3306:3306"
+    environment:
+      STORAGE_ENGINE: "InnoDb"
+      MYSQL_DATABASE: "mysqlDb"
+      MYSQL_USER: "admin"
+      MYSQL_PASSWORD: "admin"
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
